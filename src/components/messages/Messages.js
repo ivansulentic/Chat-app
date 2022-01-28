@@ -10,11 +10,11 @@ function Messages(props) {
             <li className={className} key = {index}>
             <span
               className="avatar"
-              style={{backgroundColor: member.clientData.color}}
+              style={{backgroundColor: member.color}}
             />
             <div className="message-content">
                 <div className="username">
-                  {member.clientData.username}
+                  {member.username}
                 </div>
                 <div className="text">{text}</div>
               </div>
@@ -24,7 +24,7 @@ function Messages(props) {
   return( 
  
       <ul className="messages-list">
-        {props.messages.map(m => renderMessage(m))}
+        {props.messages.map((m,i)=> renderMessage(m,i))}
       </ul>
   );
 }
