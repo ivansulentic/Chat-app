@@ -1,9 +1,10 @@
 form {
     display: flex;
     width: 100%;
-    justify-content: space-between;
-    max-width: 900px;
-    margin: 0 auto 40px;
+    justify-content: center;
+    margin: 0 auto ;
+    padding: 40px 0;
+    background-color: rgba(172, 165, 165,0.7);
   }
   
   input {
@@ -12,6 +13,7 @@ form {
     border-radius: 8px;
     border: 1px solid blue;
     flex-grow: 1;
+    max-width: 900px;
   }
   
   button {

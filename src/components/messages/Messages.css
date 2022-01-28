@@ -16,7 +16,7 @@
   
   .messages-message.currentMember {
     flex-direction: row-reverse;
-    text-align: right;
+    text-align: center;
   }
   
   .message-content {
@@ -37,9 +37,14 @@
   
   .message-content > .username {
     display: block;
-    color: gray;
+    color: rgb(47, 60, 70);
     font-size: 14px;
     padding-bottom: 4px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: rgb(219, 206, 206);
+    width: 120%;
+    text-align: center;
   }
   
   .message-content > .text {
