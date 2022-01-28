@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 import Chat from './components/chat/Chat';
 import Login from './components/login/Login';
 
@@ -10,7 +9,7 @@ class App extends Component {
 		this.state = {
 			loggedin: false,
 			username: "", 
-			color: '#ff0000',
+			avatar: '👨',
 			drone: null,
 			member: ''
 		}
@@ -20,15 +19,17 @@ class App extends Component {
 		this.setState({username: e.target.value});
 	  }
 	
-	onChangeColor = (e) => {
-		this.setState({color: e.target.value});
+	onChangeAvatar= (e) => {
+		this.setState({avatar: e.target.value});
 	}
 
 	onLogin = () => {
 		if (this.state.username) {
 			const drone = new window.Scaledrone('nUOTHJBpK0EtRvLz', {
-			  data: { username: this.state.username, color: this.state.color },
+			  data: { username: this.state.username, avatar: this.state.avatar },
 			});
+
+			console.log(drone);
 			drone.on("open", (error) => {
 				if(error) {
 					return console.error(error);
@@ -39,7 +40,7 @@ class App extends Component {
 					member: {
 						id: drone.clientId, 
 						username: this.state.username, 
-						color: this.state.color
+						avatar: this.state.avatar
 					},
 					loggedin: true
 				});
@@ -51,12 +52,15 @@ class App extends Component {
 	render() {
 		return (
 			this.state.loggedin 
-				? <Chat />
+				? <Chat 
+					drone = {this.state.drone}
+					member = {this.state.member}
+				/>
 				: <Login 
 					username = {this.state.username}
-					color = {this.state.color}
+					avatar = {this.state.avatar}
 					changeUsername = {this.onChangeUsername}
-					changeColor = {this.onChangeColor}
+					changeAvatar = {this.onChangeAvatar}
 					onLogin = {this.onLogin}
 				/>
 		);

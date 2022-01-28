@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./Input.css";
 
 function Input(props) {
    const [message, setMessage] = useState(''); 
@@ -10,15 +11,8 @@ function Input(props) {
     e.preventDefault();
 
    
-    onSendMessage(message);
+    props.onSendMessage(message);
     setMessage('');
-  }
-
-  const onSendMessage = (message) => {
-    props.drone.publish({
-      room: "observable-chat-app",
-      message
-    });
   }
 
   return( 
