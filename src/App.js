@@ -44,8 +44,7 @@ class App extends Component {
 					},
 					loggedin: true
 				});
-			});
-	
+			});	
 		}
 	  }
 

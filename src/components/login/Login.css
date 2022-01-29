@@ -14,28 +14,21 @@
     min-width: 480px;
     height: 50%;
     border: 2px solid orange;
-    box-shadow: 0px 10px 80px 0px rgba(14, 22, 20, 1);
+    box-shadow: 0px 10px 80px 0px rgba(14, 22, 20, 0.7);
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-
-    
-    
+    flex-direction: column;  
   }
 
   .username {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 40px;
-   
-    
+    font-size: 40px;  
   }
 
   .avatar{
-
       font-size: 30px;
-      font-family: 'Times New Roman', Times, serif;
-      
+      font-family: 'Times New Roman', Times, serif;    
   }
 
   .avatar-select{
@@ -45,8 +38,10 @@
       width: 190px;
   }
 
+
   option{
-     background-color: rgb(206, 197, 197);
+     background-color: rgba(141, 161, 233, 0.4);
+    
   }
 
   .btn{
@@ -57,12 +52,12 @@
       cursor: pointer;
       transition: 3s;
       border-radius: 40px;
+      margin-right: 14px;
       
   }
   .btn:hover{
       color: black;
-      background-color: rgb(81, 168, 240);
-      
+      background-color: rgb(81, 168, 240);    
   }
 
  

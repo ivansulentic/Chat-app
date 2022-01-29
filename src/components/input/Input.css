@@ -8,20 +8,23 @@ form {
   }
   
   input {
-    padding: 5px;
+    padding: 6px;
     font-size: 16px;
     border-radius: 8px;
-    border: 1px solid blue;
+    border: 2px solid blue;
     flex-grow: 1;
     max-width: 900px;
+    height: 40px;
+    border-radius: 15px;
   }
   
   button {
     padding: 5px 10px;
-    font-size: 16px;
+    font-size: 13px;
     background-color: green;
     color: white;
     border: none;
     border-radius: 8px;
     margin-left: 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   }

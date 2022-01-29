@@ -21,17 +21,17 @@ function Login(props) {
                          Select avatar:   
                     </label><br/>
                     <div className="select">
-                    <select className="avatar-select" onChange={props.changeAvatar}>
-                        <option value = '👨'>
+                         <select className="avatar-select" onChange={props.changeAvatar}>
+                             <option value = '👨'>
                                 🧑
-                        </option>
-                        <option value = '👩'>
+                             </option>
+                             <option value = '👩'>
                                 👩
-                        </option>
-                        <option value = '👱‍♂️'>
+                             </option>
+                            <option value = '👱‍♂️'>
                                 👱‍♂️
-                        </option>
-                    </select>
+                             </option>
+                        </select>
                     </div>
                 </div>
                 <br/>
@@ -40,8 +40,7 @@ function Login(props) {
             </div> 
         </div>  
     </div>
-  )
-    
+  )  
 }
 
 
