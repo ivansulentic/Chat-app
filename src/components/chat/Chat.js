@@ -3,6 +3,7 @@ import Messages from "../messages/Messages";
 import Input from '../input/Input';
 import "./Chat.css";
 
+
 class Chat extends Component {
 
   constructor(props) {
@@ -17,8 +18,8 @@ class Chat extends Component {
 
     console.log(this.props.drone, this.props.member)
     const room = this.props.drone.subscribe("observable-chat-app");  
-
     room.on('data', (text, member) => {
+
       const messages = [...this.state.messages];
       messages.push({member, text: text});
       this.setState({messages});

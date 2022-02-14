@@ -3,16 +3,23 @@ import "./Input.css";
 
 function Input(props) {
    const [message, setMessage] = useState(''); 
+   
    const onChange = (e) => {
     setMessage(e.target.value);
   }
 
   const onSubmit = (e) => {
+
     e.preventDefault();
 
    
     props.onSendMessage(message);
     setMessage('');
+  }
+
+  const alertMessage = (e) => {
+    e.preventDefault();
+    alert("This message is empty");
   }
 
   return( 
@@ -24,7 +31,7 @@ function Input(props) {
         placeholder="Enter your message and press ENTER"
         
       />
-      <button type='submit'>Send</button>
+      <button type='button'onClick={e => alertMessage(e)} >Send</button>
     </form>
   )
   

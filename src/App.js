@@ -15,6 +15,7 @@ class App extends Component {
 		}
 	}
 
+	
 	onChangeUsername = (e) => {
 		this.setState({username: e.target.value});
 	  }
@@ -36,20 +37,20 @@ class App extends Component {
 				}
 
 				this.setState({
-					drone: drone,
+					drone: drone, 
 					member: {
 						id: drone.clientId, 
 						username: this.state.username, 
 						avatar: this.state.avatar
-					},
+					}, 
 					loggedin: true
 				});
 			});	
 		}
 	  }
-
 	render() {
 		return (
+			// 
 			this.state.loggedin 
 				? <Chat 
 					drone = {this.state.drone}

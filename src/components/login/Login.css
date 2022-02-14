@@ -14,11 +14,13 @@
     min-width: 480px;
     height: 50%;
     border: 2px solid orange;
+    border-radius: 15px; 
     box-shadow: 0px 10px 80px 0px rgba(14, 22, 20, 0.7);
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;  
+    flex-direction: column; 
+    
   }
 
   .username {
